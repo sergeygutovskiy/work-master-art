@@ -7,10 +7,10 @@
 }
 
 .comments-slider {
-    margin-top: map-get($map: $spaces, $key: 3); 
+    margin-top: var(--space-md-1);
 
     &__footer {
-        margin-top: map-get($map: $spaces, $key: 2);
+        margin-top: var(--space-sm-2);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -18,8 +18,8 @@
 }
 
 .comment {
-    padding: map-get($map: $spaces, $key: 3) map-get($map: $spaces, $key: 4);
-    padding-bottom: map-get($map: $spaces, $key: 2);
+    padding: var(--space-md-1) var(--space-md-2);
+    padding-bottom: var(--space-sm-2);
 
     font-size: $font-size-small-2;
 
@@ -27,16 +27,13 @@
     border-radius: 12px;
 
     &__paragraph {
-        // line-height: 1.5em;
-        // font-weight: 300;
-
         &:not(:first-child) {
-            margin-top: map-get($map: $spaces, $key: 1); 
+            margin-top: var(--space-sm-1); 
         }
     }
 
     &__footer {
-        margin-top: map-get($map: $spaces, $key: 3); 
+        margin-top: var(--space-md-1); 
     }
 }
 

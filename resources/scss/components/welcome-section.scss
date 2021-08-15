@@ -3,8 +3,8 @@
         @extend .container;
         @extend .container-grid;
 
-        padding-top: map-get($map: $spaces, $key: 3);
-        padding-bottom: map-get($map: $spaces, $key: 3);
+        padding-top: var(--space-md-1);
+        padding-bottom: var(--space-md-1);
     }
 
     &__paragraph {

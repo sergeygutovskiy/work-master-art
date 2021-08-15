@@ -1,5 +1,10 @@
 :root {
-    
+    --space-sm-1: #{map-get($map: $spaces, $key: 'sm-1')};
+    --space-sm-2: #{map-get($map: $spaces, $key: 'sm-2')};
+    --space-md-1: #{map-get($map: $spaces, $key: 'md-1')};
+    --space-md-2: #{map-get($map: $spaces, $key: 'md-2')};
+    --space-lg-1: #{map-get($map: $spaces, $key: 'lg-1')};
+    --space-lg-2: #{map-get($map: $spaces, $key: 'lg-2')};
 }
 
 html {
@@ -38,6 +43,15 @@ h6 {
 }
 
 @mixin main--sm {
+    :root {
+        --space-sm-1: #{map-get($map: $spaces, $key: 'sm-1--sm')};
+        --space-sm-2: #{map-get($map: $spaces, $key: 'sm-2--sm')};
+        --space-md-1: #{map-get($map: $spaces, $key: 'md-1--sm')};
+        --space-md-2: #{map-get($map: $spaces, $key: 'md-2--sm')};
+        --space-lg-1: #{map-get($map: $spaces, $key: 'lg-1--sm')};
+        --space-lg-2: #{map-get($map: $spaces, $key: 'lg-2--sm')};
+    }
+    
     body {
         overflow-wrap: break-word;
     }

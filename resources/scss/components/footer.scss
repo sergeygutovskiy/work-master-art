@@ -1,7 +1,7 @@
 .footer {
     @extend .container-fluid;
     
-    margin-top: map-get($map: $spaces, $key: 6);
+    margin-top: var(--space-lg-2);
 
     display: flex;
     align-items: center;
@@ -11,13 +11,13 @@
     letter-spacing: 0.2em;
     color: $color-white;
 
-    padding-top: map-get($map: $spaces, $key: 1);
-    padding-bottom: map-get($map: $spaces, $key: 1);
+    padding-top: var(--space-sm-1);
+    padding-bottom: var(--space-sm-1);
 
     background-color: $color-black;
 
     &__link:not(:last-child) {
-        margin-right: map-get($map: $spaces, $key: 2);
+        margin-right: var(--space-sm-2);
     }
 
     &__logo {

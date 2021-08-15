@@ -1,13 +1,13 @@
 .portfolio-item-section {
     @extend .container;
-    margin-top: map-get($map: $spaces, $key: 6);
+    margin-top: var(--space-lg-2);
 
     &__header {
         text-align: center;
     }
 
     &__title {
-        margin-bottom: map-get($map: $spaces, $key: 3);
+        margin-bottom: var(--space-sm-1);
     }
 
     &__subtitle {

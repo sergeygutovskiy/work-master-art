@@ -1,10 +1,10 @@
 .slider {
     position: relative;
 
-    margin-top: map-get($map: $spaces, $key: 6);
+    margin-top: var(--space-md-2);
 
-    padding-left: map-get($map: $spaces, $key: 6);
-    padding-right: map-get($map: $spaces, $key: 6);
+    padding-left: var(--space-lg-2);
+    padding-right: var(--space-lg-2);
 
     &__slide {
         @extend .container-grid;
@@ -26,18 +26,18 @@
 
         &_left {
             left: 0;
-            margin-left: map-get($map: $spaces, $key: 6);
+            margin-left: var(--space-lg-2);
         }
 
         &_right {
             right: 0;
-            margin-right: map-get($map: $spaces, $key: 6);
+            margin-right: var(--space-lg-2);
         }
     }
 
     &__pagination {
         &:last-child {
-            margin-top: map-get($map: $spaces, $key: 2);
+            margin-top: var(--space-sm-2);
         }
         display: flex;
         justify-content: center;
@@ -56,7 +56,7 @@
         }
 
         &:not(:last-child) {
-            margin-right: map-get($map: $spaces, $key: 1);
+            margin-right: var(--space-sm-1);
         }
     }
 }
@@ -94,21 +94,21 @@
 }
 
 #slider-8 {
-    margin-bottom: map-get($map: $spaces, $key: 6);
+    margin-bottom: var(--space-lg-2);
 }
 
 @mixin slider--sm {
     .slider {
-        padding-left: map-get($map: $spaces, $key: 0);
-        padding-right: map-get($map: $spaces, $key: 0); 
+        padding-left: 0;
+        padding-right: 0; 
     
         &__button {
             &_left {
-                margin-left: map-get($map: $spaces, $key: 0);
+                margin-left: 0;
             }
     
             &_right {
-                margin-right: map-get($map: $spaces, $key: 0);
+                margin-right: 0;
             }
         }
     }

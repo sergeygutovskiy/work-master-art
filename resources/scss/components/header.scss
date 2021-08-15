@@ -15,12 +15,12 @@
     }
 
     &__name {
-        margin-bottom: map-get($map: $spaces, $key: 3);
+        margin-bottom: var(--space-md-1);
         font-size: $font-size-small-1;
     }
 
     &__title {
-        margin-bottom: map-get($map: $spaces, $key: 3);
+        margin-bottom: var(--space-md-1);
     }
 
     &__subtitle {

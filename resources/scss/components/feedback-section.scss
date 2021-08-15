@@ -1,13 +1,13 @@
 .feedback-section {
     @extend .container;
-    margin-top: map-get($map: $spaces, $key: 6);
+    margin-top: var(--space-lg-2);
 
     &__header {
         text-align: center;
     }
 
     &__content  {
-        margin-top: map-get($map: $spaces, $key: 3);
+        margin-top: var(--space-md-1);
         @extend .container-grid;
     }
 
@@ -20,12 +20,12 @@
     }
 
     &__phone {
-        margin-top: map-get($map: $spaces, $key: 3);
+        margin-top: var(--space-md-1);
         display: block;
     }
 
     &__email {
-        margin-top: map-get($map: $spaces, $key: 2);
+        margin-top: var(--space-sm-2);
         display: block;
     }
 }

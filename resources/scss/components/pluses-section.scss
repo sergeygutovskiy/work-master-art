@@ -1,6 +1,6 @@
 .pluses-section {
-    margin: map-get($map: $spaces, $key: 6) 0;
-    padding: map-get($map: $spaces, $key: 6) 0;
+    margin: var(--space-lg-2) 0;
+    padding: var(--space-lg-2) 0;
     
 
     background-color: $color-black;
@@ -12,20 +12,20 @@
     }
 
     &__subtitle {
-        margin-top: map-get($map: $spaces, $key: 2);
+        margin-top: var(--space-sm-2);
         display: inline-block;
     }
 
     &__content {
         @extend .container;
-        margin-top: map-get($map: $spaces, $key: 4);
+        margin-top: var(--space-md-2);
         
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
 
     &__item {
-        padding: 0 map-get($map: $spaces, $key: 3);
+        padding: 0 var(--space-md-1);
         text-align: center;
     }
 
@@ -34,13 +34,13 @@
     }
 
     &__name {
-        margin-top: map-get($map: $spaces, $key: 2);
+        margin-top: var(--space-sm-2);
     }
 
     &__paragraph {
-        margin-top: map-get($map: $spaces, $key: 1);
+        margin-top: var(--space-sm-1);
     
-        line-height: 1.5em;
+        // line-height: 1.5em;
         // font-weight: 300;
         font-size: $font-size-small-1;
     }
@@ -51,7 +51,7 @@
         &__content {
             grid-template-columns: 1fr;
             grid-template-rows: auto auto auto;
-            row-gap: map-get($map: $spaces, $key: 2);
+            row-gap: var(--space-sm-2);
         }
     }
 }
