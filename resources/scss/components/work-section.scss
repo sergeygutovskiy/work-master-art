@@ -1,0 +1,57 @@
+.work-section {
+    @extend .container;
+    margin-top: map-get($map: $spaces, $key: 6);
+
+    &__header {
+        text-align: center;
+    }
+
+    &__content {
+        margin-top: map-get($map: $spaces, $key: 4);
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &__item {
+        padding: 0 map-get($map: $spaces, $key: 3);
+        text-align: center;
+    }
+
+    &__number {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 70px;
+        height: 70px;
+        
+        font-size: $font-size-big-1;
+        color: $color-red;
+        
+        background-color: $color-black;
+        border-radius: 50%;
+    }
+
+    &__name {
+        margin-top: map-get($map: $spaces, $key: 2);
+    }
+
+    &__paragraph {
+        margin-top: map-get($map: $spaces, $key: 1);
+    
+        // line-height: 1.5em;
+        // font-weight: 300;
+        font-size: $font-size-small-1;
+    }
+}
+
+@mixin work-section--sm {
+    .work-section {
+        &__content {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            row-gap: map-get($map: $spaces, $key: 2);
+        }
+    }
+}

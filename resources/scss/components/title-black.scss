@@ -1,0 +1,15 @@
+.title-black {
+    @extend .container-fluid;
+
+    padding-top: map-get($map: $spaces, $key: 4);
+    padding-bottom: map-get($map: $spaces, $key: 4);
+    
+    text-align: center;
+    color: $color-white;
+
+    background-color: $color-black;
+}
+
+@mixin title-black--sm {
+    
+}

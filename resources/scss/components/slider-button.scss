@@ -1,0 +1,53 @@
+.slider-button {
+    position: relative;
+    
+    width: 56px;
+    height: 56px;
+
+    background-color: $color-black;
+    border-radius: 50%;
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        display: block;
+        width: 32px;
+        height: 32px;
+       
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNy4zMyAyNGwtMi44My0yLjgyOSA5LjMzOS05LjE3NS05LjMzOS05LjE2NyAyLjgzLTIuODI5IDEyLjE3IDExLjk5NnoiLz48L3N2Zz4=);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        filter: invert(1);
+    }
+
+    &_left {
+        &::after {
+            margin-left: -2px;
+            transform: translate(-50%, -50%) rotateZ(180deg);
+        }
+    }
+
+    &_right {
+        &::after {
+            margin-left: 2px;
+        }
+    }
+}
+
+@mixin slider-button--sm {
+    .slider-button {
+        width: 24px;
+        height: 24px;
+    
+        &::after {
+            width: 12px;
+            height: 12px;
+        }
+    }
+}

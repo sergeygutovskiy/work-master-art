@@ -1,0 +1,56 @@
+:root {
+    
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: $font-size-base;
+}
+
+p {
+    line-height: 1.5em;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: $font-size-large;
+}
+
+h2 {
+    font-size: $font-size-big-2;
+}
+
+h3 {
+    font-size: $font-size-big-1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
+
+@mixin main--sm {
+    body {
+        overflow-wrap: break-word;
+    }
+    
+    h1 {
+        font-size: $font-size-large--sm;
+    }
+    
+    h2 {
+        font-size: $font-size-big-2--sm;
+    }
+    
+    h3 {
+        font-size: $font-size-big-1--sm;
+    }
+}

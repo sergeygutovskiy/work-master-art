@@ -1,0 +1,33 @@
+.footer {
+    @extend .container-fluid;
+    
+    margin-top: map-get($map: $spaces, $key: 6);
+
+    display: flex;
+    align-items: center;
+
+    font-size: $font-size-small-1;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: $color-white;
+
+    padding-top: map-get($map: $spaces, $key: 1);
+    padding-bottom: map-get($map: $spaces, $key: 1);
+
+    background-color: $color-black;
+
+    &__link:not(:last-child) {
+        margin-right: map-get($map: $spaces, $key: 2);
+    }
+
+    &__logo {
+        margin-right: auto;
+        object-fit: contain;
+    }
+}
+
+@mixin footer--sm {
+    .footer {
+        display: none;
+    }
+}

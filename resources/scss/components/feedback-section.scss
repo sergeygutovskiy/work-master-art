@@ -1,0 +1,35 @@
+.feedback-section {
+    @extend .container;
+    margin-top: map-get($map: $spaces, $key: 6);
+
+    &__header {
+        text-align: center;
+    }
+
+    &__content  {
+        margin-top: map-get($map: $spaces, $key: 3);
+        @extend .container-grid;
+    }
+
+    &__info {
+        grid-column: span 6;
+    }
+
+    &__form {
+        grid-column: span 6;
+    }
+
+    &__phone {
+        margin-top: map-get($map: $spaces, $key: 3);
+        display: block;
+    }
+
+    &__email {
+        margin-top: map-get($map: $spaces, $key: 2);
+        display: block;
+    }
+}
+
+@mixin feedback-section--sm {
+    
+}

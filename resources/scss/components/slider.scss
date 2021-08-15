@@ -1,0 +1,115 @@
+.slider {
+    position: relative;
+
+    margin-top: map-get($map: $spaces, $key: 6);
+
+    padding-left: map-get($map: $spaces, $key: 6);
+    padding-right: map-get($map: $spaces, $key: 6);
+
+    &__slide {
+        @extend .container-grid;
+        height: auto;
+
+        > img {
+            margin: auto;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        &_left {
+            left: 0;
+            margin-left: map-get($map: $spaces, $key: 6);
+        }
+
+        &_right {
+            right: 0;
+            margin-right: map-get($map: $spaces, $key: 6);
+        }
+    }
+
+    &__pagination {
+        &:last-child {
+            margin-top: map-get($map: $spaces, $key: 2);
+        }
+        display: flex;
+        justify-content: center;
+    }
+
+    &__bullet {
+        width: 16px;
+        height: 16px;
+        background-color: $color-black;
+        border-radius: 50%;
+    
+        opacity: 0.5;
+
+        &.active {
+            opacity: 1;
+        }
+
+        &:not(:last-child) {
+            margin-right: map-get($map: $spaces, $key: 1);
+        }
+    }
+}
+
+#slider-1 .slider__slide > img {
+    grid-column: span 4 / 9;
+}
+
+#slider-2 .slider__slide > img {
+    grid-column: span 8 / 11;
+}
+
+#slider-3 .slider__slide > img {
+    grid-column: span 8 / 11;
+}
+
+#slider-4 .slider__slide > img {
+    grid-column: span 6 / 10;
+}
+
+#slider-5 .slider__slide > img {
+    grid-column: span 6 / 10;
+}
+
+#slider-6 .slider__slide > img {
+    grid-column: span 6 / 10;
+}
+
+#slider-7 .slider__slide > img {
+    grid-column: span 4 / 9;
+}
+
+#slider-8 .slider__slide > img {
+    grid-column: span 6 / 10;
+}
+
+#slider-8 {
+    margin-bottom: map-get($map: $spaces, $key: 6);
+}
+
+@mixin slider--sm {
+    .slider {
+        padding-left: map-get($map: $spaces, $key: 0);
+        padding-right: map-get($map: $spaces, $key: 0); 
+    
+        &__button {
+            &_left {
+                margin-left: map-get($map: $spaces, $key: 0);
+            }
+    
+            &_right {
+                margin-right: map-get($map: $spaces, $key: 0);
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 100%;
+    max-width: 1400px;
+
+    padding-left: map-get($map: $spaces, $key: 4);
+    padding-right: map-get($map: $spaces, $key: 4);
+}
+
+.container-fluid {
+    @extend .container;
+
+    max-width: 100%;
+}
+
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+@mixin container--sm {
+    .container {
+        padding-left: map-get($map: $spaces, $key: 1); 
+        padding-right: map-get($map: $spaces, $key: 1); 
+    }
+}

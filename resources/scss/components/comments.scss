@@ -1,0 +1,45 @@
+.comments-section {
+    @extend .container;
+
+    &__header {
+        text-align: center;
+    }
+}
+
+.comments-slider {
+    margin-top: map-get($map: $spaces, $key: 3); 
+
+    &__footer {
+        margin-top: map-get($map: $spaces, $key: 2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.comment {
+    padding: map-get($map: $spaces, $key: 3) map-get($map: $spaces, $key: 4);
+    padding-bottom: map-get($map: $spaces, $key: 2);
+
+    font-size: $font-size-small-2;
+
+    border: solid 2px $color-black;
+    border-radius: 12px;
+
+    &__paragraph {
+        // line-height: 1.5em;
+        // font-weight: 300;
+
+        &:not(:first-child) {
+            margin-top: map-get($map: $spaces, $key: 1); 
+        }
+    }
+
+    &__footer {
+        margin-top: map-get($map: $spaces, $key: 3); 
+    }
+}
+
+@mixin comments--sm {
+    
+}

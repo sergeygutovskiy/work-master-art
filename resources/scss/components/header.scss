@@ -1,0 +1,33 @@
+.header {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+
+    color: $color-white;
+
+    background-color: $color-black;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__name {
+        margin-bottom: map-get($map: $spaces, $key: 3);
+        font-size: $font-size-small-1;
+    }
+
+    &__title {
+        margin-bottom: map-get($map: $spaces, $key: 3);
+    }
+
+    &__subtitle {
+
+    }
+}
+
+@mixin header--sm {
+    
+}

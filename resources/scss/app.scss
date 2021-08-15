@@ -1,0 +1,41 @@
+@import './variables';
+@import './reset';
+@import './main';
+
+@import '~swiper/swiper';
+
+@import './components/container';
+@import './components/header';
+@import './components/navigation';
+@import './components/title-black';
+
+@import './components/welcome-section';
+@import './components/portfolio-item-section';
+@import './components/slider-button';
+@import './components/slider';
+@import './components/work-section';
+@import './components/pluses-section';
+@import './components/comments';
+@import './components/feedback-section';
+
+@import './components/footer';
+
+@media screen and (max-width: 800px) {
+    @include main--sm;
+    
+    @include container--sm;
+    @include header--sm;
+    @include navigation--sm;
+    @include title-black--sm;
+    
+    @include welcome-section--sm;
+    @include portfolio-item-section--sm;
+    @include slider-button--sm;
+    @include slider--sm;
+    @include work-section--sm;
+    @include pluses-section--sm;
+    @include comments--sm;
+    @include feedback-section--sm;
+
+    @include footer--sm;
+}

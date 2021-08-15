@@ -1,0 +1,57 @@
+.pluses-section {
+    margin: map-get($map: $spaces, $key: 6) 0;
+    padding: map-get($map: $spaces, $key: 6) 0;
+    
+
+    background-color: $color-black;
+    color: $color-white;
+
+    &__header {
+        @extend .container;
+        text-align: center;
+    }
+
+    &__subtitle {
+        margin-top: map-get($map: $spaces, $key: 2);
+        display: inline-block;
+    }
+
+    &__content {
+        @extend .container;
+        margin-top: map-get($map: $spaces, $key: 4);
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &__item {
+        padding: 0 map-get($map: $spaces, $key: 3);
+        text-align: center;
+    }
+
+    &__icon {
+        width: 70px;
+    }
+
+    &__name {
+        margin-top: map-get($map: $spaces, $key: 2);
+    }
+
+    &__paragraph {
+        margin-top: map-get($map: $spaces, $key: 1);
+    
+        line-height: 1.5em;
+        // font-weight: 300;
+        font-size: $font-size-small-1;
+    }
+}
+
+@mixin pluses-section--sm {
+    .pluses-section {
+        &__content {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            row-gap: map-get($map: $spaces, $key: 2);
+        }
+    }
+}
