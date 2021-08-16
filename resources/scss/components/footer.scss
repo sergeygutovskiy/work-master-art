@@ -28,6 +28,23 @@
 
 @mixin footer--sm {
     .footer {
-        display: none;
+        flex-direction: column;
+    
+        padding-top: var(--space-sm-2);
+        padding-bottom: var(--space-md-2);
+
+        &__link:not(:last-child) {
+            margin-right: 0;
+        }
+
+        &__logo {
+            margin-right: 0;
+        }
+
+        > * {
+            &:not(:first-child) {
+                margin-top: var(--space-sm-2);
+            }
+        }
     }
 }

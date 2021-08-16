@@ -26,6 +26,10 @@
         filter: invert(1);
     }
 
+    &:hover {
+        cursor: pointer;
+    }
+
     &_left {
         &::after {
             margin-left: -2px;

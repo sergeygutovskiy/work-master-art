@@ -6,6 +6,7 @@ SwiperCore.use([Navigation, Pagination]);
 function render_slider(id) {
     return new SwiperCore(`#${id}`, {
         slidesPerView: 1,
+        autoHeight: true,
         navigation: {
             prevEl: `#${id} .slider-button_left`,
             nextEl: `#${id} .slider-button_right`,

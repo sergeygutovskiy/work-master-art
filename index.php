@@ -1,6 +1,11 @@
 <?php
 
-require 'slider.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require_once 'vendor/autoload.php';
+require_once 'slider.php';
 
 ?>
 
@@ -24,13 +29,13 @@ require 'slider.php';
             <div class="navigation__content">
                 <img class="navigation__logo" src="/public/images/logo.png">
     
-                <a class="navigation__item" href="">
+                <a class="navigation__item" href="#work">
                     Сотрудничество
                 </a>
-                <a class="navigation__item" href="">
+                <a class="navigation__item" href="#comments">
                     Отзывы
                 </a>
-                <a class="navigation__item" href="">
+                <a class="navigation__item" href="#contacts">
                     Контакты
                 </a>
             </div>
@@ -84,6 +89,11 @@ require 'slider.php';
             $photos_1 = [
                 '/public/images/slider-1/1.webp',
                 '/public/images/slider-1/2.webp',
+                '/public/images/slider-1/3.webp',
+                '/public/images/slider-1/4.webp',
+                '/public/images/slider-1/5.webp',
+                '/public/images/slider-1/6.webp',
+                '/public/images/slider-1/7.webp',
             ];
 
             echo slider($photos_1, 'slider-1');
@@ -108,6 +118,9 @@ require 'slider.php';
             $photos_2 = [
                 '/public/images/slider-2/1.webp',
                 '/public/images/slider-2/2.webp',
+                '/public/images/slider-2/3.webp',
+                '/public/images/slider-2/4.webp',
+                '/public/images/slider-2/5.webp',
             ];
 
             echo slider($photos_2, 'slider-2');
@@ -132,6 +145,12 @@ require 'slider.php';
             $photos_3 = [
                 '/public/images/slider-3/1.webp',
                 '/public/images/slider-3/2.webp',
+                '/public/images/slider-3/3.webp',
+                '/public/images/slider-3/4.webp',
+                '/public/images/slider-3/5.webp',
+                '/public/images/slider-3/6.webp',
+                '/public/images/slider-3/7.jpg',
+                '/public/images/slider-3/8.webp',
             ];
 
             echo slider($photos_3, 'slider-3');
@@ -155,7 +174,16 @@ require 'slider.php';
 
             $photos_4 = [
                 '/public/images/slider-4/1.webp',
-                '/public/images/slider-4/2.jfif',
+                '/public/images/slider-4/2.jpg',
+                '/public/images/slider-4/3.jpg',
+                '/public/images/slider-4/4.webp',
+                '/public/images/slider-4/5.jfif',
+                '/public/images/slider-4/6.webp',
+                '/public/images/slider-4/7.webp',
+                '/public/images/slider-4/8.jpg',
+                '/public/images/slider-4/9.jpg',
+                '/public/images/slider-4/10.jpg',
+                '/public/images/slider-4/11.webp',
             ];
 
             echo slider($photos_4, 'slider-4');
@@ -180,6 +208,9 @@ require 'slider.php';
             $photos_5 = [
                 '/public/images/slider-5/1.webp',
                 '/public/images/slider-5/2.webp',
+                '/public/images/slider-5/3.webp',
+                '/public/images/slider-5/4.webp',
+                '/public/images/slider-5/5.webp',
             ];
 
             echo slider($photos_5, 'slider-5');
@@ -204,6 +235,22 @@ require 'slider.php';
             $photos_6 = [
                 '/public/images/slider-6/1.webp',
                 '/public/images/slider-6/2.webp',
+                '/public/images/slider-6/3.webp',
+                '/public/images/slider-6/4.webp',
+                '/public/images/slider-6/5.jpg',
+                '/public/images/slider-6/6.jpg',
+                '/public/images/slider-6/7.jpg',
+                '/public/images/slider-6/8.png',
+                '/public/images/slider-6/9.jpg',
+                '/public/images/slider-6/10.jpg',
+                '/public/images/slider-6/11.jpg',
+                '/public/images/slider-6/12.jpg',
+                '/public/images/slider-6/13.jpg',
+                '/public/images/slider-6/14.jpg',
+                '/public/images/slider-6/15.png',
+                '/public/images/slider-6/16.png',
+                '/public/images/slider-6/17.png',
+                '/public/images/slider-6/18.webp',
             ];
 
             echo slider($photos_6, 'slider-6');
@@ -225,6 +272,7 @@ require 'slider.php';
             $photos_7 = [
                 '/public/images/slider-7/1.webp',
                 '/public/images/slider-7/2.webp',
+                '/public/images/slider-7/3.webp',
             ];
 
             echo slider($photos_7, 'slider-7');
@@ -249,6 +297,8 @@ require 'slider.php';
             $photos_8 = [
                 '/public/images/slider-8/1.webp',
                 '/public/images/slider-8/2.webp',
+                '/public/images/slider-8/3.webp',
+                '/public/images/slider-8/4.webp',
             ];
 
             echo slider($photos_8, 'slider-8');
@@ -256,7 +306,7 @@ require 'slider.php';
             ?>
 
         </section>       
-        <div class="title-black">
+        <div class="title-black" id="work">
             <h2>Условия сотрудничества</h2>
         </div>
         
@@ -347,7 +397,7 @@ require 'slider.php';
 
         </section>
 
-        <section class="comments-section">
+        <section class="comments-section" id="comments">
             <header class="comments-section__header">
                 <h3>Отзывы клиентов</h3>
             </header>
@@ -434,7 +484,7 @@ require 'slider.php';
             </div>
         </section>
 
-        <section class="feedback-section">
+        <section class="feedback-section" id="contacts">
             <header class="feedback-section__header">
                 <h3>Обратная связь</h3>
             </header>
@@ -446,16 +496,102 @@ require 'slider.php';
                         интересным проектам, пишите, готов 
                         обсудить и реализовать все ваши идеи!
                     </p>
-                    <a class="feedback-section__phone" href="">
+                    <a class="feedback-section__phone" href="tel:+79117770151">
                         +7 911 777-01-51
                     </a>
-                    <a class="feedback-section__email" href="">
+                    <a class="feedback-section__email" href="mailto:schennikov.andrey@gmail.com">
                         schennikov.andrey@gmail.com
                     </a>
+                    <div class="feedback-section__logos">
+                        <a class="feedback-section__logo" href="https://www.behance.net/s5krhah5r83fba">
+                            <img src="/public/images/behance.svg" width="48" height="48">
+                        </a>
+                        <a class="feedback-section__logo" href="">
+                            <img src="/public/images/instagram.svg" width="48" height="48">
+                        </a>
+                        <a class="feedback-section__logo" href="https://www.facebook.com/andrey.schennikov">
+                            <img src="/public/images/facebook.svg" width="48" height="48">
+                        </a>
+                    </div>
                 </div>
-                <form class="feedback-section__form">
+                <div class="feedback-section__form">
+                    <?php
+                    
+                    if (isset($_GET['name']))
+                    {
+                        $name = $_GET['name'];
+                        $phone = $_GET['phone'];
+                        $email = $_GET['email'];
+                        $text = $_GET['text'];
 
-                </form>
+                        $mail = new PHPMailer(true);
+
+                        try {
+                            //Server settings
+                            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+                            $mail->isSMTP();                                            //Send using SMTP
+                            $mail->Host       = 'smtp.spaceweb.ru';                     //Set the SMTP server to send through
+                            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                            $mail->Username   = 'info@master-art.net';                  //SMTP username
+                            $mail->Password   = 'Rbhjdf4747';                           //SMTP password
+                            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+                            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                        
+                            //Recipients
+                            $mail->setFrom('info@master-art.net');
+                            // $mail->addAddress('schennikov.andrey@gmail.com');     //Add a recipient
+                            $mail->addAddress('sergey.gutovsk@gmail.com');     //Add a recipient
+                                                
+                            //Content
+                            $mail->isHTML(true);                                  //Set email format to HTML
+                            $mail->Subject = 'Заявка с сайта';
+                            $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+                            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+                        
+                            $mail->send();
+                            // echo 'Message has been sent';
+                        } catch (Exception $e) {
+                            // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                        }
+                    }
+
+                    ?>
+                    <form class="feedback-form" action="/#contacts" method="/">
+                        <div>
+                            <input 
+                                class="feedback-form__input" 
+                                type="text" 
+                                placeholder="Имя*"
+                                name="name"
+                                required
+                                >
+                            <input 
+                                class="feedback-form__input" 
+                                type="text" 
+                                placeholder="Телефон*"
+                                name="phone"
+                                required
+                                >
+                            <input 
+                                class="feedback-form__input" 
+                                type="email" 
+                                placeholder="Почта"
+                                name="email"
+                                >
+                            <textarea 
+                                class="feedback-form__textarea feedback-form__input" 
+                                rows="5" 
+                                placeholder="Пожелания"
+                                name="text"
+                                ></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="feedback-form__button">
+                                Отправить
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
@@ -464,10 +600,10 @@ require 'slider.php';
         
         <img class="footer__logo" src="/public/images/logo.png" width="72" height="72">
 
-        <a class="footer__link" href="">
+        <a class="footer__link" href="#work">
             Сотрудничество
         </a>
-        <a class="footer__link" href="">
+        <a class="footer__link" href="#comments">
             Отзывы
         </a>
     </footer>

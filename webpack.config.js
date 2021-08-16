@@ -2,9 +2,9 @@ const path = require('path');
 const minicss = require('mini-css-extract-plugin'); 
 
 module.exports = {
-	mode: 'development',
+	mode: 'production',
 	entry: {
-        app: './resources/js/app.js',
+        app: './resources/js/app.js'
     },
 	output: {
 		path: path.resolve(__dirname, 'public'),
